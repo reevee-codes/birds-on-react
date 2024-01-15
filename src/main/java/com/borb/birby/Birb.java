@@ -26,18 +26,18 @@ import javax.persistence.Id;
  */
 // tag::code[]
 @Entity // <1>
-public class Employee {
+public class Birb {
 
 	private @Id @GeneratedValue Long id; // <2>
 	private String firstName;
-	private String lastName;
+	private String color;
 	private String description;
 
-	private Employee() {}
+	private Birb() {}
 
-	public Employee(String firstName, String lastName, String description) {
+	public Birb(String firstName, String color, String description) {
 		this.firstName = firstName;
-		this.lastName = lastName;
+		this.color = color;
 		this.description = description;
 	}
 
@@ -45,17 +45,17 @@ public class Employee {
 	public boolean equals(Object o) {
 		if (this == o) return true;
 		if (o == null || getClass() != o.getClass()) return false;
-		Employee employee = (Employee) o;
-		return Objects.equals(id, employee.id) &&
-			Objects.equals(firstName, employee.firstName) &&
-			Objects.equals(lastName, employee.lastName) &&
-			Objects.equals(description, employee.description);
+		Birb birb = (Birb) o;
+		return Objects.equals(id, birb.id) &&
+			Objects.equals(firstName, birb.firstName) &&
+			Objects.equals(color, birb.color) &&
+			Objects.equals(description, birb.description);
 	}
 
 	@Override
 	public int hashCode() {
 
-		return Objects.hash(id, firstName, lastName, description);
+		return Objects.hash(id, firstName, color, description);
 	}
 
 	public Long getId() {
@@ -74,12 +74,12 @@ public class Employee {
 		this.firstName = firstName;
 	}
 
-	public String getLastName() {
-		return lastName;
+	public String getColor() {
+		return color;
 	}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setColor(String color) {
+		this.color = color;
 	}
 
 	public String getDescription() {
@@ -92,12 +92,12 @@ public class Employee {
 
 	@Override
 	public String toString() {
-		return "Employee{" +
-			"id=" + id +
-			", firstName='" + firstName + '\'' +
-			", lastName='" + lastName + '\'' +
-			", description='" + description + '\'' +
-			'}';
+		return "Birb{" +
+				"id=" + id +
+				", firstName='" + firstName + '\'' +
+				", color='" + color + '\'' +
+				", description='" + description + '\'' +
+				'}';
 	}
 }
 // end::code[]

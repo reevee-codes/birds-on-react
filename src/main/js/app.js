@@ -11,18 +11,18 @@ class App extends React.Component { // <1>
 
 	constructor(props) {
 		super(props);
-		this.state = {employees: []};
+		this.state = {birbs: []};
 	}
 
 	componentDidMount() { // <2>
-		client({method: 'GET', path: '/api/employees'}).done(response => {
-			this.setState({employees: response.entity._embedded.employees});
+		client({method: 'GET', path: '/api/birbs'}).done(response => {
+			this.setState({birbs: response.entity._embedded.birbs});
 		});
 	}
 
 	render() { // <3>
 		return (
-			<EmployeeList employees={this.state.employees}/>
+			<EmployeeList birbs={this.state.birbs}/>
 		)
 	}
 }
@@ -31,8 +31,8 @@ class App extends React.Component { // <1>
 // tag::employee-list[]
 class EmployeeList extends React.Component{
 	render() {
-		const employees = this.props.employees.map(employee =>
-			<Employee key={employee._links.self.href} employee={employee}/>
+		const birbs = this.props.birbs.map(birb =>
+			<Birb key={birb._links.self.href} birb={birb}/>
 		);
 		return (
 			<table>
@@ -42,7 +42,7 @@ class EmployeeList extends React.Component{
 						<th>Last Name</th>
 						<th>Description</th>
 					</tr>
-					{employees}
+					{birbs}
 				</tbody>
 			</table>
 		)
@@ -51,13 +51,13 @@ class EmployeeList extends React.Component{
 // end::employee-list[]
 
 // tag::employee[]
-class Employee extends React.Component{
+class Birb extends React.Component{
 	render() {
 		return (
 			<tr>
-				<td>{this.props.employee.firstName}</td>
-				<td>{this.props.employee.lastName}</td>
-				<td>{this.props.employee.description}</td>
+				<td>{this.props.birb.firstName}</td>
+				<td>{this.props.birb.color}</td>
+				<td>{this.props.birb.description}</td>
 			</tr>
 		)
 	}
