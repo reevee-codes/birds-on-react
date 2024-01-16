@@ -38,5 +38,13 @@ public class MyController {
   }
 }
 
+@Controller
+public class MyController2 {
+  @RequestMapping("/index2.html")
+  public String servePage() {
+    return "index2";
+  }
+
+}
 }
 // end::code[]
