@@ -30,5 +30,13 @@ public class HomeController {
 		return "index"; // <3>
 	}
 
+	@Controller
+public class MyController {
+  @RequestMapping("/index1.html")
+  public String servePage() {
+    return "index1";
+  }
+}
+
 }
 // end::code[]

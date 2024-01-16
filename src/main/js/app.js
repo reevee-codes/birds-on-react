@@ -1,5 +1,4 @@
 'use strict';
-
 // tag::vars[]
 const React = require('react'); // <1>
 const ReactDOM = require('react-dom'); // <2>
@@ -38,9 +37,9 @@ class EmployeeList extends React.Component{
 			<table>
 				<tbody>
 					<tr>
-						<th>First Name</th>
-						<th>Last Name</th>
-						<th>Description</th>
+						<th>Imię</th>
+						<th>Kolor</th>
+						<th>Opis</th>
 					</tr>
 					{birbs}
 				</tbody>
@@ -55,7 +54,7 @@ class Birb extends React.Component{
 	render() {
 		return (
 			<tr>
-				<td>{this.props.birb.firstName}</td>
+				<td>{this.props.birb.firstName}🐦</td>
 				<td>{this.props.birb.color}</td>
 				<td>{this.props.birb.description}</td>
 			</tr>
