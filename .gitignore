@@ -73,3 +73,13 @@ htmlcov/
 *.temp
 temp/
 tmp/
+
+# Maven dependency directories
+org/
+com/
+net/
+io/
+**/repository/
+*.jar.sha1
+*.pom.sha1
+_remote.repositories
