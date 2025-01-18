@@ -33,6 +33,26 @@ package-lock.json
 .mvn/timing.properties
 .mvn/wrapper/maven-wrapper.properties
 
+# Maven dependencies
+**/org/
+**/com/
+**/net/
+**/io/
+**/antlr/
+**/aopalliance/
+**/backport-util-concurrent/
+**/ch/
+**/classworlds/
+**/commons-io/
+**/jakarta/
+**/javax/
+**/junit/
+**/ognl/
+**/_remote.repositories
+**/*.sha1
+**/*.pom
+**/*.jar
+
 # Logs
 *.log
 logs/
@@ -73,13 +93,3 @@ htmlcov/
 *.temp
 temp/
 tmp/
-
-# Maven dependency directories
-org/
-com/
-net/
-io/
-**/repository/
-*.jar.sha1
-*.pom.sha1
-_remote.repositories
