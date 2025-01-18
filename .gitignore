@@ -1,65 +1,58 @@
+# IntelliJ / Eclipse / VSCode project files
+.idea/
 *.iml
-.idea
-target
-bower_components
-node_modules
-node
-*.log
-asciidoctor.css
-README.html
-built
-dump.rdb
-package-lock.json
-.classpath
+.settings/
 .project
+.classpath
 org.eclipse.*
 settings.json
-*.iml
-.settings
-target
-.project
-.classpath
-dist
 
-# Numerous always-ignore extensions
+# OS or Editor folders/files
+.DS_Store
+._*
+.cache
+thumbs.db
+*.swo
+*.swp
+*.vi
+*~
+*.tmp.html
+
+# Logs, patches, etc
+*.log
 *.bak
 *.patch
 *.diff
 *.err
-
-# temp file for git conflict merging
 *.orig
-*.log
 *.rej
-*.swo
-*.swp
-*.zip
-*.vi
-*~
-*.sass-cache
-*.tmp.html
-*.dump
 
-# OS or Editor folders
-.DS_Store
-._*
-.cache
-.tmproj
-*.esproj
-*.sublime-project
-*.sublime-workspace
-nbproject
-thumbs.db
-
-# Folders to ignore
-.idea
-.hg
-.svn
-.CVS
+# Node / Bower / Yarn
 node_modules/
-jscoverage_lib/
+bower_components/
+# npm-debug.log is also matched by *.log above
+
+# Spring/Java build output
+target/
+
+# Webpack or other front-end build outputs
+dist/
+built/
+webpack-assets.json
+
+# Redis dump
+dump.rdb
+
+# If you have a directory literally named 'node', keep this. Otherwise remove it.
+node
+
+# Potentially ignore if these are always generated or do not need to be versioned
 src/main/webapp/WEB-INF/ftl/rsrc/
 src/main/webapp/rsrc/dist/
-src/main/resources/application-local.properties
-webpack-assets.json
 /com/
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Decide whether to ignore package-lock.json
+#   - Usually recommended to keep in source control
+# package-lock.json
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -1,2 +1,6 @@
+1. Install webpack locally
+npm install --save-dev webpack webpack-cli
+
+
 npm run-script watch
 ./mvnw spring-boot:run
